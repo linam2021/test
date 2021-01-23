@@ -127,8 +127,8 @@
                     </div>
                     <div >
                         <?php
-                         $d=date();
-                         echo '$d';
+                         $d=date('d');
+                         echo $d;
                         ?>
                     </div>
                 </div>
