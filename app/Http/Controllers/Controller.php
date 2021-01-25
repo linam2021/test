@@ -18,13 +18,15 @@ class Controller extends BaseController
     {
         //$d= new DateTime('now');
         $d=new DateTime('now');
-        $currentDBtime = DB::select( 'select NOW() as the_time , TIMEDIFF(NOW(), UTC_TIMESTAMP) as GMT_TIME_DIFF' );
+       // $currentDBtime = DB::select( 'select NOW() as the_time , TIMEDIFF(NOW(), UTC_TIMESTAMP) as GMT_TIME_DIFF' );
         //$currentDBtime[0]->the_time;
+        $currentDBtime = DB::select( 'select NOW() as the_time ' );
+
         $response = [
             'success' => true,
             'date' =>$d,
             'dateD' => $currentDBtime[0]->the_time,
-            'dif'=> $currentDBtime[0]->GMT_TIME_DIFF,
+           // 'dif'=> $currentDBtime[0]->GMT_TIME_DIFF,
             'message' => 'User registered Successfully!'
         ];
 
