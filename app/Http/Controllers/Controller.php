@@ -36,7 +36,7 @@ class Controller extends BaseController
         //$currentDBtime[0]->the_time;
         $currentDBtime = DB::select( 'select NOW() as the_time ' );
 
-        $challenges= User::where('name','!=','mmm')->first(); // DB::table('challenges')->get();
+        $challenges= DB::table('users')->first(); // DB::table('challenges')->get();
 
 
 
