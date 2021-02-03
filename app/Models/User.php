@@ -17,11 +17,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'heroName',
+        'name',
         'email',
         'password',
-        'target',
-        'InstagramAccount'
+        'points'
     ];
 
     /**
@@ -31,7 +30,6 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
     /**
